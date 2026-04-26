@@ -1,0 +1,51 @@
+sudo apt update
+sudo apt install python3-pip
+sudo apt install python3-venv
+mkdir my_flask_app && cd my_flask_app
+python3 -m venv venv
+
+source venv/bin/activate
+
+pip install Flask
+
+flask --version
+
+
+create app.py 
+
+paste app.py code
+
+Run
+python3 app.py
+
+👉 Test:
+
+- http://<IP>:5000/ 
+- http://<IP>:5000/delay 
+- http://<IP>:8000/metrics
+
+
+
+Use these three command if your application is not accessible
+
+sudo ufw allow 5000
+sudo ufw allow 8000
+sudo ufw reload
+
+Install prometheus
+cat /dev/null > prometheus.yml
+
+vi prometheus.yml
+
+# prometheus.yml
+
+./prometheus --config.file=prometheus.yml
+
+Check port 9090 – Prometheus UI and pickup variables from there. 
+ “search fiels from 9090”
+
+check targets 
+
+http://<server-ip>:9090/targets
+
+0.
